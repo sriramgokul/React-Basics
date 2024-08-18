@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
 function App(){
@@ -45,7 +45,7 @@ React.createElement("div",{className:"greet-msg"},React.createElement("h1",{id:"
 }
 
 function MovieCard({img,name,rating}){
-  
+  const [state,setState]= useState(0);
   return (
     <div className='movie-card'>
       <div className='img-sec'>
@@ -53,10 +53,14 @@ function MovieCard({img,name,rating}){
       </div>
       <div className="mvname-sec">
         <h3>{name}</h3>
+        <h3>{state}</h3>
       </div>
       <div className="mvdetail-sec">
         <button>Watch Now</button>
+        <button onClick={()=>setState(state+1)}>Like</button>
+        <button onClick={()=>setState(state - 1)}>Dislike</button>
         <p>Ratings: {rating}</p>
+
       </div>
     </div>
   )
