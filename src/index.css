@@ -1,8 +1,37 @@
-.card{
+.app{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem
+  ;
+}
+
+.movie-card{
   display: flex;
   flex-direction: column;
-  width: 500px;
-  gap: 2rem;
-  padding: 15px;
+  width: 350px;
+  height: 270px;
   border: 1px solid black;
+  border-radius: 5px;
+  justify-content: stretch;
+}
+
+img{
+  width: 350px;
+  height: 140px;
+  object-fit: cover;
+}
+.mvdetail-sec{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+}
+button{
+  width: 100px;
+  height: 25px;
+  border: none;
+  background-color: crimson;
+  padding: 5px;
+  border-radius: 5px;
+  color:white
 }
